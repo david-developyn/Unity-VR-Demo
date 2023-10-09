@@ -17,6 +17,7 @@ public class Master : MonoBehaviour {
 			_current_scene = value;
 			if (value == Scenes.start) {
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+				Cursor.lockState = CursorLockMode.None;
 			}
 			on_scene_change?.Invoke();
 		}
